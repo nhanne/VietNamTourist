@@ -1,0 +1,258 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    section {
+        margin-bottom: 30px;
+    }
+    /* ===========================navbar============================ */
+    
+    .navbar {
+        background-color: rgba(0, 0, 0, 0)!important;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    nav.sticky {
+        background-color: rgb(255, 255, 255)!important;
+        margin: 0;
+    }
+    
+    nav.sticky a {
+        color: rgb(17, 65, 75)!important;
+    }
+    
+    nav.sticky .navbar-toggler {
+        background-color: rgb(17, 65, 75)!important;
+    }
+    /* ===========================BANNER============================ */
+    
+    #banner {
+        width: 100%;
+        height: 640px;
+        background-image: url('image/home1.jpg');
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+    
+    #banner #banner-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+    
+    #banner button {
+        background-color: rgb(20, 80, 92);
+        border: none;
+        padding: 20px;
+    }
+    
+    @media screen and (max-width: 600px) {
+        #banner {
+            height: 260px;
+            width: auto;
+            position: relative;
+        }
+        #banner-caption h2,
+        #banner-caption h3 {
+            display: none;
+        }
+    }
+    /* ===========================ABOUT============================ */
+    
+    #about #introduction {
+        margin-top: 50px;
+    }
+    
+    #about #introduction h2 {
+        color: rgb(17, 65, 75);
+        font-family: Raleway, sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    
+    #about .carousel-inner img {
+        width: 100%;
+        margin: auto;
+        height: auto;
+        min-height: 200px;
+        max-height: 420px;
+        transition: all 1s ease-in-out;
+    }
+    
+    #about .carousel-caption {
+        position: absolute;
+        right: 15%;
+        top: 20%;
+        left: 15%;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+        font-family: Beaufort for LOL, Arial, sans-serif;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .carousel-caption h3,
+        .carousel-caption p {
+            display: none;
+        }
+    }
+    /* ===========================PRODUCE============================ */
+    
+    #produce h1 {
+        color: rgb(17, 65, 75);
+    }
+    
+    #produce img {
+        width: 100%;
+        min-height: 300px;
+    }
+    
+    #produce a {
+        text-decoration: none;
+        color: rgb(17, 65, 75);
+    }
+    
+    #produce .col-md-4:hover img {
+        transition: all 1s;
+        transform: translateX(0);
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        transform: translateX(25%);
+        transition-timing-function: var(--bounce-out);
+        width: 80%;
+    }
+    /* ===========================NEWS============================ */
+    
+    #news h1 {
+        color: rgb(17, 65, 75);
+    }
+    
+    #news img {
+        width: 100%;
+        min-height: 250px;
+    }
+    
+    #news a {
+        text-decoration: none;
+        color: rgb(17, 65, 75);
+    }
+    
+    #news .col-md-4:hover img {
+        transform: scale(0.9);
+        transition: 0.5s;
+    }
+    /* ===========================FOOTER============================ */
+    
+    #footer {
+        padding: 20px;
+        font-size: 16px;
+        background-color: white!important;
+        border-top: 1px solid rgb(109, 105, 105);
+    }
+    
+    #footer li {
+        list-style: none;
+    }
+    
+    #footer a {
+        color: rgb(17, 65, 75)!important;
+        text-decoration: none;
+        display: inline-block;
+        margin: 5px 0;
+    }
+    
+    #footer h5 {
+        margin-top: 20px;
+        margin-left: 30px;
+        color: rgb(17, 65, 75)!important;
+    }
+    
+    #footer .col-md-4 {
+        margin-bottom: 50px;
+    }
+    /* ===========================BACKTOP============================ */
+    
+    #backtop {
+        width: 50px;
+        height: 50px;
+        background: rgb(17, 65, 75);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        cursor: pointer;
+    }
+    /* ===========================SEARCHMENU============================ */
+    
+    #searchsection {
+        width: 100%;
+        padding: 5px 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    #searchsection .input-group,
+    #searchsection select {
+        margin-top: 25px;
+    }
+    
+    #searchsection #formdate {
+        margin-top: 10px;
+    }
+    /* ===========================PRODUCT============================ */
+    
+    #product img {
+        width: 100%;
+        transition: all .3s ease;
+    }
+    
+    #product img:hover {
+        transform: scale(1.5);
+    }
+    
+    #product a {
+        display: block;
+        overflow: hidden;
+    }
+    
+    #product .row {
+        margin: 10px 0;
+    }
+    
+    #product button {
+        margin: 20px 0;
+    }
+    
+    #product h3 {
+        color: rgb(24, 101, 116);
+    }
+    /* ===========================PAGINATION============================ */
+    
+    #pagination .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+    
+    .pagination a {
+        color: black;
+    }
+    /* ===========================COMMENTS============================ */
+    
+    .comment {
+        margin-top: 50px;
+    }
+    
+    .comment li {
+        list-style: none;
+    }

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - VietNamTourist</title>
+    <link rel="shortcut icon" href="image/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+    <!-- ======================================== NAVBAR ====================================================== -->
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-sm bg-white navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">VIETNAMTOURIST</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class=" navbar-nav me-auto ">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="produce.html" class="nav-link active">Sản Phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" class="nav-link">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Liên Hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link">Đăng Nhập</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Tìm gì đó ?">
+                        <button class="btn btn-success" type="button"> <i class="bi bi-search"></i>Search</button>
+
+                        <datalist>
+
+                        </datalist>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================================== BANNER ====================================================== -->
+    <div id="banner" style="background-image: url('https://www.saigontourist.net/uploads/homepage/canh%20dep%20du%20lich%2001.jpg')">
+        <div id="banner-caption">
+            <h1><strong>DU LỊCH CÙNG VIETNAMTOURIST</strong></h1>
+            <h3><strong>TOUR NGHỈ DƯỠNG</strong></h3>
+            <h2><strong>ĐA DẠNG & CHẤT LƯỢNG</strong></h2>
+            <a href="#product"><button class="btn btn-success" style="background-color:#198754;">LET'S GO</button></a>
+        </div>
+    </div>
+
+    <!-- ======================================== SEARCH MENU ====================================================== -->
+    <section id="searchsection" class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <form class="input-group">
+
+                    <input id="searchmenu" type="text" class="form-control" list="topics" placeholder="Tìm tour..." name="search">
+                    <div class="input-group-btn">
+                        <button onclick="hobbies()" class="btn btn-success" type="submit"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                    <datalist id="topics">
+                        <option value="London"></option>
+                        <option value="Hà Nội"></option>
+                        <option value="Hội An"></option>
+                        <option value="Berlin"></option>
+                        <option value="Đà Lạt"></option>
+                    </datalist>
+
+                </form>
+            </div>
+            <div class="col-md-4" id="formdate">
+                <div class="row">
+                    <div class="col-6">
+                        <form>
+                            <label for="start">Ngày khởi hành:</label>
+                            <input type="date" name="start" id="start">
+                        </form>
+                    </div>
+                    <div class="col-6">
+                        <form>
+                            <label for="end">Đến ngày: </label>
+                            <input type="date" name="end" id="end">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form>
+                            <select class="form-control">
+                                <option>Trong nước</option>
+                                <option>Ngoài nước</option>
+                                <option>Tất cả</option>
+
+                            </select>
+
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <button id="btnsearch" type="button" class="btn btn-success" style="margin: 25px 0; padding: 5px 10px;width: 100%;">Tìm
+                            kiếm</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ======================================== TOOGLE ====================================================== -->
+
+    <section>
+
+        <div class="row collapse container-fluid" id="collapseExample">
+            <div class="col-md-4">
+                <a href="sanpham.html"> <img src="https://cdn2.ivivu.com/2020/06/15/16/ivivu-fansipang.gif" alt="dulich.png" style="width:100%">
+                </a>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>DU LỊCH SAPA [KHỞI HÀNH TỪ HẢI PHÒNG]</h3>
+                        <b>HẢI PHÒNG - SAPA</b>
+                        <div>
+                            <span>
+                                <i class="fas fa-star" style="color: orange;"></i>
+                                <i class="fas fa-star" style="color: orange;"></i>
+                                <i class="fas fa-star" style="color: orange;"></i>
+                                <i class="fas fa-star" style="color: orange;"></i>
+                                <i class="fas fa-star" ></i>
+                            </span>
+                            <br> Thời gian : 3 ngày 2 đêm<br> Phương tiện : Đi về bằng ôtô <br>Du lịch Sapa: tham quan nhà thờ Đá, núi Hàm Rồng, ...
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b> 2.350.000 vnđ/
+                                khách</b></button> <br>
+                        <span class="textInfo">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            28/1/2021
+                        </span> <br>
+                        <a href="sanpham.html"><button type="button" class="btn btn-light">Xem thêm</button></a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ======================================== PRODUCT ====================================================== -->
+    <section id="product" class="container-fluid">
+        <h1 style="text-align: center;font-family: Raleway, sans-serif;"> &#x1F4A5; <strong> ĐIỂM ĐẾN
+                ĐANG HOT </strong> &#x1F4A5;
+        </h1>
+
+        <div class="tab-content" id="myTabContent">
+            <!-- ==================== tab 1======================== -->
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <a href="sanpham.html"> <img src="https://kynghiviet.vn/public/upload/Blog/2019/Thang12/Phu-quoc/du-lich-phu-quoc-kinh-nghiem-va-thong-tin-huu-ich.jpg?1578022748671" alt="dulich.png" style="width:100%"></a>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH PHÚ QUỐC 3N2Đ [KHỞI HÀNH TỪ VINH] </h3>
+                                <b>NGHỆ AN - PHÚ QUỐC</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 3 ngày 2 đêm<br> Phương tiện: Đi về bằng máy bay<br>Tham quan suối Tranh - quý khách có thể đi dạo trong rừng, thư...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>4.600.000
+                                        vnđ</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    27/12/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://static.tuoitre.vn/tto/i/s626/2017/12/07/e183541e.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH TIỀN GIANG - BẾN TRE - TRÀ VINH - SÓC TRĂNG - BẠC LIÊU - CÀ MAU - CẦN THƠ
+                                </h3>
+                                <b>TP. HỒ CHÍ MINH - MIỀN TÂY</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 6 ngày 5 đêm (theo yêu cầu)<br> Phương tiện: Đi về bằng xe <br> Tham quan lò kẹo dừa, thưởng thức trái cây theo mùa, nghe nhạc tài...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>7.779.000 vnđ/
+                                        khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    18/12/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://www.saigontourist.net/uploads/images/Page/SGT-CuChi/242834363_10160271427402952_5307975930879584325_n.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH CỦ CHI - ĐẤT THÉP THÀNH ĐỒNG [KHU DI TÍCH ĐỊA ĐẠO CỦ CHI - ĐỀN BẾN DƯỢC]
+                                </h3>
+                                <b>TP. Hồ Chí Minh - Củ Chi</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 1 ngày<br> Phương tiện: Đi về bằng xe <br> -Du lịch Xanh Cùng Lữ Hành VIETNAMTOURIST-Tham quan khu Di Tích Địa...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>679.000</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    27/11/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="http://wiki-travel.com.vn/Uploads/picture/Thaophuongnguyen-184510084555-cn-1.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH HẠ LONG - [KHỞI HÀNH TỪ HẢI PHÒNG] </h3>
+                                <b>HẢI PHÒNG - HẠ LONG</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                    </span>
+                                    <br> Thời gian: 1 ngày<br> Phương tiện: Đi về bằng ôtô <br>Tham quan Cảng tàu Tuần Châu, Hòn Chó Đá, Hòn Đinh Hương, Hòn Gà Chọi,...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>1.290.000 vnđ
+                                    </b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    20/12/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://vcdn1-dulich.vnecdn.net/2019/10/04/tha-c-ba-n-gio-c-vnexpress-5-1570193128.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=GGIbzHt8g5SVeH8FwEMohA" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH THAM QUAN CAO BẰNG - PÁC BÓ - THÁC BẢN GIỐC </h3>
+                                <b>HÀ NỘI - ĐÔNG BẮC</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian : 4 ngày 3 đêm<br> Phương tiện : Ô tô <br>Tham quan Khu di tích Pắc Bó – di tích lịch sử gắn liền với chủ tịch Hồ Chí Minh...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b> 3.990.000 vnđ/
+                                        khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    12/12/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button type="button" class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+
+            </div>
+            <!-- ==================== tab 2======================== -->
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <a href="sanpham.html"> <img src="https://image.thanhnien.vn/w1024/Uploaded/2021/dcxpcwvo/2021_11_13/ben-tre6-8712.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH BẾN TRE - DU LỊCH VỀ NGUỒN - SINH THÁI</h3>
+                                <b>TP. HỒ CHÍ MINH - MIỀN TÂY</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 2 ngày 1 đêm<br> Phương tiện: Đi về bằng ôtô<br>Tham quan KDL Sinh Thái Farmstay Hải Vân với vườn cây ăn trái: bưởi...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>2.390.000 vnđ/
+                                        khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    30/12/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://vcdn1-dulich.vnecdn.net/2021/05/18/Con-Dao-Shutterstock-jpeg-5664-1621324509.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=_u1ER22DXMdVT2glR29WkQ" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH CÔN ĐẢO [2 NGÀY] </h3>
+                                <b>TP. HỒ CHÍ MINH - CÔN ĐẢO</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 2 ngày 1 đêm<br> Phương tiện: Đi về bằng máy bay <br> Đến với Côn Đảo (hay với các tên khác như Côn Sơn, Côn Lôn)...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>5.700.000 vnđ/
+                                        khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    20/1/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://letravel.vn/temp/-uploaded-tour-tour-tay-bac_dulichlaocaiyty3ngay2dem_thumb_1200x1200.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH HÀ NỘI - LÀO CAI - LŨNG PÔ - Y TÝ - MƯỜNG HUM
+                                </h3>
+                                <b>HÀ NỘI - SAPA</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 3 ngày 3 đêm<br> Phương tiện: Tàu + Ô tô<br>Khám phá Y Tý - Ngắm nhìn cánh đồng ruộng bậc thang A Lù,...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>2.350.000 vnđ/
+                                        khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    30/1/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://www.chudu24.com/wp-content/uploads/2017/02/2-104.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH LONG AN - ĐỒNG THÁP - CHÂU ĐỐC - HÀ TIÊN - RẠCH GIÁ </h3>
+                                <b>TP. HỒ CHÍ MINH - MIỀN TÂY</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 4 ngày 3 đêm (theo yêu cầu)<br> Phương tiện: Đi về bằng xe <br>Tham quan các công trình nhà cổ của ba miền Bắc - Trung - Nam...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>5.799.000 vnđ/ khách
+                                    </b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    25/1/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://cdn2.ivivu.com/2020/06/15/16/ivivu-fansipang.gif" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH SAPA [KHỞI HÀNH TỪ HẢI PHÒNG]</h3>
+                                <b>HẢI PHÒNG - SAPA</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian : 3 ngày 2 đêm<br> Phương tiện : Đi về bằng ôtô <br>Du lịch Sapa: tham quan nhà thờ Đá, núi Hàm Rồng, ...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b> 2.350.000 vnđ/
+                                        khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    28/1/2021
+                                </span> <br>
+                                <a href="sanpham.html"><button type="button" class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+
+            </div>
+            <!-- ==================== tab 3======================== -->
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <a href="sanpham.html"> <img src="https://dulichthoigian.vn/wp-content/uploads/2020/10/chua-van-sn-cr-500x312-1.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH TÂM LINH CÔN ĐẢO</h3>
+                                <b>HÀ NỘI - CÔN ĐẢO</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br>Thời gian : 3 ngày 2 đêm<br>Phương tiện : Máy bay + ô tô<br>Du lịch Côn Đảo nổi tiếng đến với những bãi tắm đẹp hoang sơ,...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>5.999.000
+                                        vnđ/khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    3/1/2022
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://cdn.baogiaothong.vn/upload/images/2019-1/article_img/2019-02-06/a9-1--1549415761-width3000height2000.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH BUÔN MA THUỘT - BUÔN ĐÔN - KDL SINH THÁI KOTAM [KHỞI HÀNH TỪ BUÔN MA THUỘT]
+                                </h3>
+                                <b>BUÔN MA THUỘT - BUÔN MA THUỘT</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br>Thời gian : 2 ngày 1 đêm<br> Phương tiện : Đi về bằng ôtô <br> Trải nghiệm cảm giác thú vị khi ngồi trên lưng những Chú voi Bản...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>1.550.000
+                                        vnđ/khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    20/1/2022
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://letravel.vn/uploaded/nhungthacnuocdepnhattaynguyehutkhach.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH BUÔN MA THUỘT [NGƯỢC DÒNG DRAYNUR BIKING - TREKKING - RAFTING]
+                                </h3>
+                                <b>BUÔN MA THUỘT - BUÔN MA THUỘT</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian : 2 ngày 1 đêm<br> Phương tiện : Đi về bằng ôtô <br> Phối hợp 3 môn : Đạp xe, trekking, chèo thuyền vượt thác để khám..
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>2.350.000
+                                        vnđ/khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    25/1/2022
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://statics.vinpearl.com/du-lich-can-gio-1_1625016502.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3> DU LỊCH KHU DỰ TRỮ SINH QUYỂN CẦN GIỜ [CHIẾN KHU RỪNG SÁC – KHU DU LỊCH SINH THÁI VÀM SÁT] </h3>
+                                <b>TP. HỒ CHÍ MINH - CẦN GIỜ</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian: 1 ngày<br> Phương tiện : Đi về bằng xe <br> Du Lịch Xanh Cùng Lữ Hành - Tham quan Chiến Khu Rừng Sác...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b>1.600.000 vnđ
+                                    </b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    28/1/2022
+                                </span> <br>
+                                <a href="sanpham.html"><button class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="sanpham.html"> <img src="https://datviettour.com.vn/uploads/images/tin-tuc/cam-nang-du-lich/Nam-Cat-Tien/nam-cat-tien-1.jpg" alt="dulich.png" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>DU LỊCH NAM CÁT TIÊN - KDL SUỐI MƠ </h3>
+                                <b>ĐỒNG NAI - NAM CÁT TIÊN</b>
+                                <div>
+                                    <span>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" style="color: orange;"></i>
+                                        <i class="fas fa-star" ></i>
+                                    </span>
+                                    <br> Thời gian : 2 ngày 1 đêm<br> Phương tiện : Đi về bằng ôtô <br>Tham quan đi Vườn quốc gia Nam Cát Tiênxem Cây Tung Thằn Lằn Sấm,...
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="price btn btn-success" data-bs-toggle="modal" data-bs-target="#buyModal">Giá từ: <b> 1.790.000
+                                        vnđ/khách</b></button> <br>
+                                <span class="textInfo">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    12/1/2022
+                                </span> <br>
+                                <a href="sanpham.html"><button type="button" class="btn btn-light">Xem thêm</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr class="d-sm-none" />
+
+            </div>
+        </div>
+
+    </section>
+    <!-- ======================================== PAGINATION ====================================================== -->
+    <section id="pagination">
+        <ul class="pagination nav nav-tabs" role="tablist">
+            <li class="page-item disabled"><a class="page-link ">Previous</a></li>
+            <li class="page-item"> <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">1</button>
+            </li>
+            <li class="page-item"> <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">2</button></li>
+            <li class="page-item"> <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">3</button></li>
+            <li class="page-item disabled"><a class="page-link ">Next</a></li>
+        </ul>
+    </section>
+
+
+
+    <!-- ======================================== MODAL BUY ====================================================== -->
+    <div class="modal" id="buyModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Book This Tour</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="psw"> 
+                        How many person?</label>
+                            <input type="number" class="form-control" id="psw" placeholder="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="usrname">Your mail</label>
+                            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-dark" style="position: absolute;left:0">Send </button>
+                    <p style="float: left;">Need <a href="#">help?</a></p>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======================================== FOOTER====================================================== -->
+
+    <footer id="footer" class="container-fluid ">
+        <div class="row ">
+            <div class="col-md-5 ">
+                <p>Công ty TNHH một thành viên - Vietnamtourist - Quận 10 TP.HCM</p>
+                <img src="image/prize.png " alt="cup " style="margin-left: 100px; ">
+            </div>
+            <div class="col-md-7 ">
+                <div class="row ">
+                    <div class="col-4 ">
+                        <h5>DỊCH VỤ</h5>
+                        <ul>
+                            <li><a href="# ">Tour trong nước</a></li>
+                            <li><a href="# ">Tour nước ngoài</a></li>
+                            <li><a href="# ">Vé máy bay</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 ">
+                        <h5>KHÁCH HÀNG</h5>
+                        <ul>
+                            <li><a href="# " target="_blank ">Travel Voucher </a></li>
+                            <li><a href="# " target="_blank ">Bảo hiểm Du lịch</a></li>
+                            <li><a href="# ">Ý kiến khách hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 ">
+                        <h5>LIÊN HỆ</h5>
+                        <ul>
+                            <li><a href="# ">Giới thiệu</a></li>
+                            <li><a href="# ">Liên hệ</a></li>
+                            <li><a href="# ">Chi nhánh</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center "> &#169; Vietnamtourist.com.vn</p>
+
+
+    </footer>
+
+
+    <div id="backtop">
+        <i class="fas fa-chevron-up "></i>
+    </div>
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="script.js "></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnsearch").click(function() {
+                $("#collapseExample").toggle();
+            })
+        })
+    </script>
+</body>
+
+</html>
