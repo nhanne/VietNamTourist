@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $('#backtop').fadeOut();
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
             $('.navbar').addClass('sticky');
