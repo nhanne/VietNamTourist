@@ -14,4 +14,7 @@ $(document).ready(function() {
             scrollTop: 0
         }, 0);
     });
+    $('.navbar .navbar-toggler-icon').click(function() {
+        $('.navbar').addClass('sticky');
+    })
 });

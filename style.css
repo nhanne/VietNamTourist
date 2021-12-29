@@ -24,6 +24,20 @@
     nav.sticky .navbar-toggler {
         background-color: rgb(17, 65, 75)!important;
     }
+    
+    .active {
+        border-bottom: 2px solid white;
+    }
+    
+    nav.sticky .active {
+        border-bottom: 2px solid black;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     /* ===========================BANNER============================ */
     
     #banner {
